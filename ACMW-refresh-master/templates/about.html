@@ -1,0 +1,149 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+{% include "banner.html" %}
+{# To-Do for this page: Crop the event images differently - they leave gray space on mobile device-size breakpoints #}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-push-4">
+      <div class="section">
+        <h2>Association For Computing Machinery - Women</h2>
+        <p class="description">at California State University, Fullerton</p>
+        <img class="img-responsive" src="{{ url_for('static', filename='img/ACMWBackground.png') }}" alt="ACMW photo collage" />
+        <hr class="orange-bar" />
+        <p>
+          Our club was born in Fall 2015. Kathy Saad- the first President and Michael Shafae - the first advisor, were the founders of our club. Ever since it has continued to grow with more members joining and events becoming more successful.</p>
+          <p>Our purpose is to reach out to local communities with a focus on a younger female audience, and teach them the exciting world of computer science. We do this by teaching them fundamental concepts of computer programming by providing them with interactive experiences. Raspberry Pi's are a great way to show them the possibilites as it is a very versatile piece of equipment. Through our interaction with students, projects were made, knowledge was gained, and friendships were formed.</p>
+          <p>We engage with our local community by hosting events and inviting interested members. The events are described below.</p>
+        </div>
+        <div class="section section-our-projects" id="events">
+          <div class="title-area">
+            <h2>ACM-W Events</h2>
+            <div class="separator separator-info">✻</div>
+          </div>
+          <div class="project" style="background-image: url({{ url_for('static', filename='img/events/creative-coding.jpg') }})">
+            <a class="over-area" href="/events/creative-coding">
+              <div class="content">
+                <h1>Creative Coding</h1>
+                <p>Creative Coding is a program designed by ACM and ACM-W members at California State University, Fullerton. The purpose is to introduce to girl scouts the many ways computer science can be applied to different devices. We've shown girl scouts how to write and understand code in various programming languages by utilizing Ozobots, Turtle Graphics, Google Cardboards, and Raspberry Pi's. Our objective is to get girl scouts more enthusiastic about STEM, especially Computer Science.</p>
+              </div>
+            </a>
+          </div>
+          <div class="project" style="background-image: url({{ url_for('static', filename='img/events/stem-expo.jpg') }})">
+            <a class="over-area" href="/events/stem-expo">
+              <div class="content">
+                <h1>Stem Expo</h1>
+                <p>We've teamed up with the Girls Scouts of Orange County and on October 30, 2016 they bring over 400 girls scouts ranging from 4th to 12th grade to the Fullerton campus. The event is designed to show them the great opportunities that the Science, Technology, Engineering and Mathematics field can offer for their lives and future. We have another STEM Expo event coming up this year on October 15, 2017. </p>
+              </div>
+            </a>
+          </div>
+          <div class="project" style="background-image: url({{ url_for('static', filename='img/events/leadership-summit.jpg') }})">
+            <a class="over-area" href="/events/leadership-summit">
+              <div class="content">
+                <h1>Leadership and Diversity Summit</h1>
+                <p>This summit was hosted by both ACM &amp; ACMW. In this event, CSUF students were able to gather insightful information about what to expect when working in the technical industry. Professionals directly spoke to students to share their experience and provide useful tips that students can take with them in their pursuit of their career.</p>
+              </div>
+            </a>
+          </div>
+          <div class="project" style="background-image: url({{ url_for('static', filename='img/events/code-camp.jpg') }})">
+            <a class="over-area" href="/events/titan-lab-tours">
+              <div class="content">
+                <h1>Titan Lab Tours</h1>
+                <p>Titan Lab Tour is an event for middle school and high school Girl Scouts where we introduce STEM opportunities and labs offered at CSUF. We take these young women on a tour around our campus to give them exposure to a college campus as well as encourage them to pursue a career in the STEM field. </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-pull-8 sidebar">
+        <div class="section">
+          <div class="card card-blog card-plain card-info">
+            <div class="content">
+              <h2 class="card-title">Welcome!</h2>
+              <div class="line-divider line-warning"></div>
+              <p class="text-gray">
+                We hope you take the opportunity to unite with our club and further your experience and knowledge!</p>
+                <p class="text-primary"><strong>Our general meetings are on Fridays 4:00 p.m. - 5:00 p.m.</strong></p>
+                <p>We're always looking for new members and any volunteers are always welcomed! No membership fee is required, just your enthusiasm and interest. </p>
+              </div>
+            </div>
+            <h3 class="text-center">Board Members</h3>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Janeen - President"/>
+                  <div class="over-area">
+                    <h3>Janeen Yamaak</h3>
+                    <p>President</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Arely - Vice President"/>
+                  <div class="over-area">
+                    <h3>Arely De León</h3>
+                    <p>Vice President</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Taylor - Treasurer"/>
+                  <div class="over-area">
+                    <h3>Taylor Noh</h3>
+                    <p>Treasurer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Dalisa - Secretary"/>
+                  <div class="over-area">
+                    <h3>Dalisa Nguyen</h3>
+                    <p>Secretary</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Victoria - Event Coordinator"/>
+                  <div class="over-area">
+                    <h3>Victoria Naranjo</h3>
+                    <p>Event Coordinator</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Jeena - Project Manager"/>
+                  <div class="over-area">
+                    <h3>Jeena Shetti</h3>
+                    <p>Project Manager</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Eugene - Webmaster"/>
+                  <div class="over-area">
+                    <h3>Eugene Lee</h3>
+                    <p>Webmaster</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="project project-board-member">
+                  <img src="{{ url_for('static', filename='img/staff/ACMW-group.jpg') }}" alt="Graciela - Webmaster"/>
+                  <div class="over-area">
+                    <h3>Graciela Orozco</h3>
+                    <p>Webmaster</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
