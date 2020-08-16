@@ -1,4 +1,16 @@
 <!doctype html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/calendar.min.css') }}">
+<script src="{{url_for('static', filename = 'js/calendar.min.js')}}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let calendarElement = document.getElementById('event-calendar');
+    let calendar = new FullCalendar.Calendar(calendarElement,
+      {
+        initialView: 'dayGridMonth'
+      });
+    calendar.render();
+  });
+</script>
 {% extends "base.html" %}
 {% block content %}
 <div class="section section-header">
@@ -8,8 +20,8 @@
       <div class="content">
         <div class="title-area">
           <p><a href="http://www.fullerton.edu/" target="_blank">California State University, Fullerton</a></p>
-          <hr class="orange-bar"/>
-          <h1 class="title-modern">ACM-W</h1>
+          <hr class="orange-bar" />
+          <h1 class="title-modern">ACM-W Local Test Copy</h1>
           <h3>Association for Computing Machinery - Women</h3>
         </div>
       </div>
@@ -23,8 +35,16 @@
         <h2>What we do</h2>
         <div class="separator separator-info">✻</div>
         <p>
-          The Cal State Fullerton chapter of the <a class="text-primary" href="https://women.acm.org/" target="_blank">ACM-W </a><strong class="text-info">supports, celebrates, and advocates</strong> for the full engagement, education, and opportunities of women in all aspects of the computing field. We endeavor to provide a wide range of programs and services to students and advance, in the larger community, the contributions of technical women students.
+          The Cal State Fullerton chapter of the <a class="text-primary" href="https://women.acm.org/"
+            target="_blank">ACM-W </a><strong class="text-info">supports, celebrates, and advocates</strong> for the
+          full engagement, education, and opportunities of women in all aspects of the computing field. We endeavor to
+          provide a wide range of programs and services to students and advance, in the larger community, the
+          contributions of technical women students.
         </p>
+      </div>
+      <div id="event-calendar">
+
+
       </div>
       <div class="card card-blog card-plain card-info">
         <div class="content">
@@ -32,10 +52,12 @@
           <div class="line-divider line-warning"></div>
           <p class="text-gray">
             We hope you take the opportunity to unite with our club and further your experience and knowledge!</p>
-            <p class="text-primary"><strong>Our general meetings are Fridays from 4:00 p.m. - 5:00 p.m.</strong></p>
-            <p>We're always looking for new members and any volunteers are always welcomed! No membership fee is required, just your enthusiasm and interest. Thank you!</p>
-          </div>
+          <p class="text-primary"><strong>Our general meetings are Tuesdays biweekly from 4:30 - 5:30 p.m.</strong></p>
+          <p>We're always looking for new members and any volunteers are always welcomed! No membership fee is required,
+            just your enthusiasm and interest. Thank you!</p>
+          <a href="/contact.html" class="btn btn-fill btn-info">Sign up for Emails</a>
         </div>
+      </div>
     </div>
   </div>
 </div>
