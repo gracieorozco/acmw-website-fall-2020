@@ -75,3 +75,8 @@ hr.orange-bar {
   color: black;
   font-size: inherit !important;
 }
+
+#whatWeDo{
+  margin-top: -40px;
+  text-align: center;
+}

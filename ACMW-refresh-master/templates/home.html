@@ -1,11 +1,17 @@
 <!doctype html>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/calendar.min.css') }}">
 <script src="{{url_for('static', filename = 'js/calendar.min.js')}}"></script>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     let calendarElement = document.getElementById('event-calendar');
     let calendar = new FullCalendar.Calendar(calendarElement,
       {
+        googleCalendarApiKey: 'AIzaSyCOXuIAL9REvI_LN-NqZrfhIyoSNU1nlEc',
+        events: {
+          googleCalendarId: 't6gpcsereb81g7jcdcqf6df1qk@group.calendar.google.com',
+          className: 'gcal-event'
+        },
         initialView: 'dayGridMonth'
       });
     calendar.render();
@@ -34,18 +40,16 @@
       <div class="title-area">
         <h2>What we do</h2>
         <div class="separator separator-info">✻</div>
-        <p>
-          The Cal State Fullerton chapter of the <a class="text-primary" href="https://women.acm.org/"
-            target="_blank">ACM-W </a><strong class="text-info">supports, celebrates, and advocates</strong> for the
-          full engagement, education, and opportunities of women in all aspects of the computing field. We endeavor to
-          provide a wide range of programs and services to students and advance, in the larger community, the
-          contributions of technical women students.
-        </p>
       </div>
-      <div id="event-calendar">
-
-
-      </div>
+      <p id="whatWeDo">
+        The Cal State Fullerton chapter of the <a class="text-primary" href="https://women.acm.org/"
+          target="_blank">ACM-W </a><strong class="text-info">supports, celebrates, and advocates</strong> for the full
+        engagement, education, and opportunities of women in all aspects of the computing field. We endeavor to provide
+        a wide range of programs and services to students and advance, in the larger community, the contributions of
+        technical women students.
+      </p>
+      <div id="event-calendar"></div>
+      <br>
       <div class="card card-blog card-plain card-info">
         <div class="content">
           <h2 class="card-title">Get Involved!</h2>
